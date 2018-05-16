@@ -2,7 +2,6 @@ package net.atos.testlab.cucumber.steps;
 
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,6 +9,7 @@ import cucumber.api.java.en.When;
 import net.atos.testlab.cucumber.pageobjects.PoLabel;
 import net.atos.testlab.cucumber.pageobjects.PoTextbox;
 import net.atos.testlab.cucumber.pageobjects.PoTextlink;
+import net.atos.testlab.cucumber.pageobjects.PoTitle;
 import net.atos.testlab.cucumber.utils.CommonUtils;
 
 /**
@@ -18,6 +18,7 @@ import net.atos.testlab.cucumber.utils.CommonUtils;
 public class StepsGeneral {
 
     private final WebDriver webDriver = CommonUtils.getDriver();
+
 
 
     @Given("^user navigates to \"([^\"]*)\"$")
@@ -30,17 +31,23 @@ public class StepsGeneral {
        this.webDriver.getTitle().contains(title);
     }
 
-    
 
-    @When("^user enters \"([^\"]*)\" in the textbox \"([^\"]*)\"$")
-    public void user_enters_in_the_textbox(String text, String textboxName) throws Throwable {
-        new PoTextbox(webDriver, textboxName).setText(text);
+    @Then("^the title \"([^\"]*)\" is shown$")
+    public void theTitleIsShown(String titleName) throws Throwable {
+        new PoTitle(webDriver, titleName).getElement().isDisplayed();
         Thread.sleep(500);
     }
 
     @When("^user clicks on the textlink \"([^\"]*)\"$")
     public void userClicksOnTheTextlink(String textlinkName) throws Throwable {
-          new PoTextlink(webDriver, textlinkName).click();
+
+        new PoTextlink(webDriver, textlinkName).click();
+    }
+
+    @When("^user enters \"([^\"]*)\" in the textbox \"([^\"]*)\"$")
+    public void user_enters_in_the_textbox(String text, String textboxName) throws Throwable {
+        new PoTextbox(webDriver, textboxName).setText(text);
+        //Thread.sleep(500);
     }
 
     @And("^user clicks on the label \"([^\"]*)\"$")

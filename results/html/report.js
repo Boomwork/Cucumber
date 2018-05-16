@@ -2,62 +2,42 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "line": 1,
   "name": "Test",
-  "description": "",
+    "description": "Wat gaat hier gebeuren...",
   "id": "test",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5662747225,
+    "duration": 4513847881,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 4,
-  "name": "Gebruiker met BSN logt in",
+    "line": 16,
+    "name": "Search for books",
   "description": "",
-  "id": "test;gebruiker-met-bsn-logt-in",
+    "id": "test;search-for-books",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 3,
-      "name": "@test"
+        "line": 15,
+        "name": "@Test2"
     }
   ]
 });
 formatter.step({
-  "line": 5,
+    "line": 17,
   "name": "user navigates to \"http://demo.nopcommerce.com/\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "the title \"nopCommerce demo store\" shown",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 7,
-  "name": "user clicks on the textlink \"Register\"",
+    "line": 18,
+    "name": "user clicks on the textlink \"Books\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "user clicks on the label \"Male\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "user enters \"John\" in the textbox \"First Name\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "user enters \"Doe\" in the textbox \"Last Name\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "user enters \"John@Doe.com\" in the textbox \"Email\"",
-  "keyword": "And "
+    "line": 19,
+    "name": "then the title \"Books\" is shown",
+    "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -69,101 +49,37 @@ formatter.match({
   "location": "StepsGeneral.userNavigateTo(String)"
 });
 formatter.result({
-  "duration": 1238271799,
+    "duration": 1424181934,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "nopCommerce demo store",
-      "offset": 11
-    }
-  ],
-  "location": "StepsGeneral.theTitleShown(String)"
-});
-formatter.result({
-  "duration": 12535666,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Register",
+        "val": "Books",
       "offset": 29
     }
   ],
   "location": "StepsGeneral.userClicksOnTheTextlink(String)"
 });
 formatter.result({
-  "duration": 910152586,
+    "duration": 1071035474,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Male",
-      "offset": 26
+        "val": "Books",
+        "offset": 16
     }
   ],
-  "location": "StepsGeneral.userClicksOnTheLabel(String)"
+    "location": "StepsGeneral.thenTheTitleIsShown(String)"
 });
 formatter.result({
-  "duration": 73653951,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "John",
-      "offset": 13
-    },
-    {
-      "val": "First Name",
-      "offset": 35
-    }
-  ],
-  "location": "StepsGeneral.user_enters_in_the_textbox(String,String)"
-});
-formatter.result({
-  "duration": 634898521,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Doe",
-      "offset": 13
-    },
-    {
-      "val": "Last Name",
-      "offset": 34
-    }
-  ],
-  "location": "StepsGeneral.user_enters_in_the_textbox(String,String)"
-});
-formatter.result({
-  "duration": 594608307,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "John@Doe.com",
-      "offset": 13
-    },
-    {
-      "val": "Email",
-      "offset": 43
-    }
-  ],
-  "location": "StepsGeneral.user_enters_in_the_textbox(String,String)"
-});
-formatter.result({
-  "duration": 632601744,
+    "duration": 539588244,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2034005424,
+    "duration": 1597289324,
   "status": "passed"
 });
 });
