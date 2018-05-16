@@ -1,43 +1,43 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
 formatter.feature({
   "line": 1,
-  "name": "Test",
-    "description": "Wat gaat hier gebeuren...",
-  "id": "test",
+  "name": "Test feature",
+  "description": "",
+  "id": "test-feature",
   "keyword": "Feature"
 });
 formatter.before({
-    "duration": 4513847881,
+  "duration": 4674682257,
   "status": "passed"
 });
 formatter.scenario({
-    "line": 16,
-    "name": "Search for books",
+  "line": 14,
+  "name": "Search for books",
   "description": "",
-    "id": "test;search-for-books",
+  "id": "test-feature;search-for-books",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-        "line": 15,
-        "name": "@Test2"
+      "line": 13,
+      "name": "@Test2"
     }
   ]
 });
 formatter.step({
-    "line": 17,
+  "line": 15,
   "name": "user navigates to \"http://demo.nopcommerce.com/\"",
   "keyword": "Given "
 });
 formatter.step({
-    "line": 18,
-    "name": "user clicks on the textlink \"Books\"",
+  "line": 16,
+  "name": "user clicks on the textlink \"Books\"",
   "keyword": "When "
 });
 formatter.step({
-    "line": 19,
-    "name": "then the title \"Books\" is shown",
-    "keyword": "Then "
+  "line": 17,
+  "name": "the header \"Books\" is shown",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -49,37 +49,37 @@ formatter.match({
   "location": "StepsGeneral.userNavigateTo(String)"
 });
 formatter.result({
-    "duration": 1424181934,
+  "duration": 1335131367,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-        "val": "Books",
+      "val": "Books",
       "offset": 29
     }
   ],
   "location": "StepsGeneral.userClicksOnTheTextlink(String)"
 });
 formatter.result({
-    "duration": 1071035474,
+  "duration": 1214154521,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-        "val": "Books",
-        "offset": 16
+      "val": "Books",
+      "offset": 12
     }
   ],
-    "location": "StepsGeneral.thenTheTitleIsShown(String)"
+  "location": "StepsGeneral.theHeaderIsShown(String)"
 });
 formatter.result({
-    "duration": 539588244,
+  "duration": 529371262,
   "status": "passed"
 });
 formatter.after({
-    "duration": 1597289324,
+  "duration": 1655188879,
   "status": "passed"
 });
 });

@@ -1,6 +1,4 @@
-Feature: Test
-  Wat gaat hier gebeuren...
-
+Feature: Test feature
 
   Scenario: Gebruiker met BSN logt in
     Given user navigates to "http://demo.nopcommerce.com/"
@@ -16,4 +14,4 @@ Feature: Test
   Scenario: Search for books
     Given user navigates to "http://demo.nopcommerce.com/"
     When user clicks on the textlink "Books"
-    Then the title "Books" is shown
+    Then the header "Books" is shown

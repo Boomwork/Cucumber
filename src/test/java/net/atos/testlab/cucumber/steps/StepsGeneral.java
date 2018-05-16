@@ -1,5 +1,6 @@
 package net.atos.testlab.cucumber.steps;
 
+import net.atos.testlab.cucumber.pageobjects.PoHeader;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.java.en.And;
@@ -9,7 +10,7 @@ import cucumber.api.java.en.When;
 import net.atos.testlab.cucumber.pageobjects.PoLabel;
 import net.atos.testlab.cucumber.pageobjects.PoTextbox;
 import net.atos.testlab.cucumber.pageobjects.PoTextlink;
-import net.atos.testlab.cucumber.pageobjects.PoTitle;
+import net.atos.testlab.cucumber.pageobjects.PoHeader;
 import net.atos.testlab.cucumber.utils.CommonUtils;
 
 /**
@@ -32,9 +33,9 @@ public class StepsGeneral {
     }
 
 
-    @Then("^the title \"([^\"]*)\" is shown$")
-    public void theTitleIsShown(String titleName) throws Throwable {
-        new PoTitle(webDriver, titleName).getElement().isDisplayed();
+    @Then("^the header \"([^\"]*)\" is shown$")
+    public void theHeaderIsShown(String titleName) throws Throwable {
+        new PoHeader(webDriver, titleName).getElement().isDisplayed();
         Thread.sleep(500);
     }
 
