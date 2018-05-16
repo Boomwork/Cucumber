@@ -1,4 +1,4 @@
-Feature: Test
+Feature: Test feature
 
   @test
   Scenario: Gebruiker met BSN logt in 
