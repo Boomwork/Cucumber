@@ -12,7 +12,8 @@ public class PoTextbox extends PoParent {
 
     public PoTextbox(WebDriver driver, String name) {
         super(driver);
-        element = this.webDriver.findElement(xpath("//input[contains(@id,'"+ name.replaceAll("\\s+", "") +"') or [contains(@name,']"));
+        element = this.webDriver
+                .findElement(xpath("//input[contains(@id,'" + name.replaceAll("\\s+", "") + "') or contains(@name,'" + name.replaceAll("\\s+", "") + "')]"));
     }
 
 
