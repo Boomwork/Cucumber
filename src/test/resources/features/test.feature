@@ -17,3 +17,4 @@ Feature: Test
     Given user navigates to "http://demo.nopcommerce.com/"
     When user clicks on the textlink "Books"
     Then the title "Books" is shown
+    Then the title "PullRequest" is shown
