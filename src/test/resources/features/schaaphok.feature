@@ -1,6 +1,6 @@
 Feature: Testfeature schaaphok
 
-  @marcel
+  @schaaphok
   Scenario: Gebruiker met BSN logt in
     Given user navigates to "http://demo.nopcommerce.com/"
     Then the title "nopCommerce demo store" shown
