@@ -1,4 +1,4 @@
-Feature: Test
+Feature: Testfeature schaaphok
 
   @marcel
   Scenario: Gebruiker met BSN logt in
@@ -11,4 +11,3 @@ Feature: Test
     And user enters "Doe" in the textbox "Last Name"
     And user enters "John@Doe.com" in the textbox "Email"
 
-   # Scenario: Gebruiker zonder BSN logt in
