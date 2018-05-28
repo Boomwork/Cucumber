@@ -21,6 +21,7 @@ public class PoTextlink extends PoParent {
     }
 
     public void click() {
+
         this.element.click();
     }
 }

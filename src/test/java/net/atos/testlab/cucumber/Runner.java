@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
         plugin = {"pretty", "html:results/html"},
         features = {"src/test/resources/features"},
-        tags = {"@test"},
+        tags = {"@Test2"},
         glue = {"net.atos.testlab.cucumber"})
 
 public class Runner {
