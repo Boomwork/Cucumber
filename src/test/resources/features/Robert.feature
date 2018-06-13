@@ -1,6 +1,6 @@
 Feature: Testfeature schaaphok
 
-  @verboom
+  @verboom    @bert @marcel
   Scenario: Maak gebruiker aan
     Given user navigates to "http://demo.nopcommerce.com/"
     Then the title "nopCommerce demo store" shown
