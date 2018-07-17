@@ -11,6 +11,7 @@ public abstract class PoParent {
     final WebDriver webDriver;
 
     WebElement element;
+    //MFkeywords keyword;
 
     PoParent(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -19,4 +20,6 @@ public abstract class PoParent {
     public WebElement getElement() {
         return element;
     }
+
+    //public  MFkeywords getKeyword(){return keyword;}
 }

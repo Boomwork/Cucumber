@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 /**
  * TODO - DESCRIBE ME
  */
-public class PoTitle extends PoParent {
-    public PoTitle(WebDriver driver, String name) {
+public class PoHeader extends PoParent {
+    public PoHeader(WebDriver driver, String name) {
         super(driver);
         this.element = this.webDriver.findElement(xpath("//h1[contains(.,'" + name + "')]"));
     }
