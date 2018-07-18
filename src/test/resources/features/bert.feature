@@ -1,7 +1,7 @@
-Feature: Test
-  Wat gaat hier gebeuren...
+Feature: Test Bert
+  Background: Dit wordt voor ieder Scenario dat uitgevoerd wordt gedraaid
 
-
+    @smoketest
   Scenario: Gebruiker met BSN logt in
     Given user navigates to "http://demo.nopcommerce.com/"
     Then the title "nopCommerce demo store" shown
@@ -16,5 +16,6 @@ Feature: Test
   Scenario: Search for books
     Given user navigates to "http://demo.nopcommerce.com/"
     When user clicks on the textlink "Books"
-    Then the title "Books" is shown
-    Then the title "PullRequest" is shown
+    Then the header "Books" is shown
+    Then the header "PullRequest" is shown
+    When user clicks on the textlink "Computers" in the navbar "haeder-menu"

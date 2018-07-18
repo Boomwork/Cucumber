@@ -35,7 +35,7 @@ public class HookBefore {
         }
         final DesiredCapabilities caps = DesiredCapabilities.chrome();
         final ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+       // options.addArguments("--start-maximized");
         options.addArguments("--disable-infobars");
         options.addArguments("--no-sandbox");
         final Map<String, Object> prefs = new HashMap<>();

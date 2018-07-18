@@ -2,10 +2,7 @@ package net.atos.testlab.cucumber.utils;
 
 import org.openqa.selenium.WebDriver;
 
-/**
- * TODO - DESCRIBE ME
- */
-public class CommonUtils {
+public final class CommonUtils {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -17,6 +14,8 @@ public class CommonUtils {
     }
 
     public static void killDriver() {
+        driver.manage().deleteAllCookies();
+        driver.close();
         driver.quit();
         driver = null;
     }

@@ -6,18 +6,20 @@ import org.openqa.selenium.WebDriver;
 
 import net.atos.testlab.cucumber.utils.DynamicWebWaiter;
 
+/**
+ * TODO - DESCRIBE ME
+ */
+public class PoButton extends PoParent {
 
-public class PoTextlink extends PoParent {
-
-    public PoTextlink(WebDriver driver, String name) {
+    public PoButton(WebDriver driver, String name) {
         super(driver);
-        this.element = this.webDriver.findElement(xpath("//a[contains(.,'" + name + "')or contains(@id,'" + name.replaceAll("\\s+", "") + "')]"));
+        element = this.webDriver.findElement(
+                xpath("//*[self::input or self::button][contains(@id,'" + name + "') or contains(@name,'" + name + "') or contains (@value,'" + name + "')]"));
     }
 
-
-    public boolean isDisplayed() {
+    public void isDisplayed() {
         DynamicWebWaiter.waitForPageReady(this.webDriver);
-        return this.element.isDisplayed();
+        this.element.click();
     }
 
     public void click() {
