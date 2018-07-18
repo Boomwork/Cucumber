@@ -17,7 +17,8 @@ public class PoTextbox extends PoParent {
         switch (type) {
             case NORMAL:
                 element = this.webDriver.findElement(
-                        xpath("//input[contains(@id,'" + name.replaceAll("\\s+", "") + "') or contains(@name,'" + name.replaceAll("\\s+", "") + "')]"));
+                        xpath("//input[contains(@id,'" + name.replaceAll("\\s+", "") + "') or contains(@name,'" + name.replaceAll("\\s+", "") + "') or " +
+                                      "contains(@placeholder,'" + name + "')]"));
                 break;
             case LABEL:
                 element = this.webDriver.findElement(xpath("//label[contains(.,'" + name + "')]//..//input"));
