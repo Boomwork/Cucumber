@@ -10,6 +10,7 @@ Feature: Testfeature
     And user enters "John" in the textbox "First Name"
     And user enters "Doe" in the textbox "Last Name"
     And user enters "John@Doe.com" in the textbox "Email"
+
     #nog afmaken
 
   @Verboom
@@ -21,5 +22,6 @@ Feature: Testfeature
     And user clicks on the checkbox "RememberMe"
     And user clicks on the button "Log in"
     Then the image "nopCommerce" is shown
+    When user clicks on the textlink "Log out"
     
 
